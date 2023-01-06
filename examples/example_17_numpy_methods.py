@@ -26,5 +26,9 @@ print(a.max(1))
 
 # Conversions
 print(a.tolist())     # Return as Python (nested) lists
-print(a.astype(str))  # Convert all items to strings
-print(a.fill(0))      # Set all values to 0
+print(a.astype(str))  # Convert all items to a new type (e.g. strings)
+
+# Changing shape
+print(a.ravel())          # Flattened array
+print(a.reshape((3, 2)))  # Modifies the shape
+print(a.T)                # Returns the array transposed
