@@ -5,12 +5,14 @@ import numpy as np
 
 # Index and slice 1d arrays just like lists
 a = np.arange(5)*2  # [0, 2, 4, 6, 8]
-print(a[2])     # 4
-print(a[1:4])   # [2, 4, 6]
-print(a[:])     # [0, 2, 4, 6, 8]
-print(a[::-1])  # [8, 6, 4, 2, 0]
-a[::2] = -1     # set every second number to -1
-print(a)        # [-1, 2, -1, 6, -1]
+print(f'\n- a - \n{a}')
+print(a[2])          # 4
+print(a[1:4])        # [2, 4, 6]
+print(a[:])          # [0, 2, 4, 6, 8]  full slice
+print(a[::-1])       # [8, 6, 4, 2, 0]  step of -1
+print(a[[3, 1, 0]])  # [6, 2, 0]        new array with specific items
+a[::2] = -1          # set every second number to -1
+print(a)             # [-1, 2, -1, 6, -1]
 
 
 # MULTIDIMENSIONAL ARRAYS
@@ -20,7 +22,7 @@ def f(x, y):
 
 
 b = np.fromfunction(f, (5, 4), dtype=int)
-print(b)
+print(f'\n- b - \n{b}')
 # [[ 0  1  2  3]
 #  [10 11 12 13]
 #  [20 21 22 23]
@@ -38,18 +40,20 @@ print(b[-1])  # equivalent to b[-1, :] => returns [40, 41, 42, 43]
 # Can use ... to fill in
 print(b[..., -1])  # equivalent to b[:, -1] => returns [3, 13, 23, 43]
 
-
 # ITERATING
 
 # Iterating starts at 0 axis
+print("Iterate over rows")
 for row in b:
     print(row)
 
 # Can nest to access higher axes
+print("Iterate over rows and items")
 for row in b:
     for item in row:
         print(item)
 
 # Can iterate over each element using ndarray.flat
+print("Iterate over items")
 for item in b.flat:
     print(item)
