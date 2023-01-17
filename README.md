@@ -11,12 +11,12 @@ This is the code for the *O'Reilly Live Training* - **Python Data Structures and
    - Cloned (ideal) or downloaded
 4. Jupyter, NumPy and Pandas installed
     - `pip install jupyter numpy pandas`
-5. To fill out a short **survey**: https://forms.gle/KCSXZy7tHeb1B9ce8
+5. Fill out a short **survey**: https://forms.gle/KCSXZy7tHeb1B9ce8
    - We will analyze the results during the class.
 
 There are detailed set up instructions for each step below.
 
-If you have further questions, please email **arianne.dee.studios** at gmail dot com.
+If you have further questions, please email **arianne.dee.studios** at **gmail** dot **com**.
 
 ## Detailed setup instructions 
 
@@ -24,7 +24,6 @@ If you have further questions, please email **arianne.dee.studios** at gmail dot
 2. [Choose an IDE](#2-choose-an-ide)
 3. [Download the code](#3-download-the-course-files)
 4. [Install external packages](#4-install-external-python-packages)
-5. [Make sure that you can run Python in PyCharm](#4-make-sure-that-you-can-run-python-in-pycharm)
 
 ### 1. Install Python 3.7 or higher
 
@@ -33,30 +32,18 @@ you probably have it installed already through [Anaconda](https://www.anaconda.c
 
 If not, or you're not sure, 
 the easiest way to get Python is to download it from the 
-[website](https://www.python.org/downloads/)
+[website](https://www.python.org/downloads/).
 
-Go to https://www.python.org/downloads/
-
-Click the yellow button at the top to download the latest version of Python (e.g. 3.11.1),
-then follow the following instructions.
-
-#### On Mac or Linux
-
-Follow the prompts and install using the default settings.
-
-#### On Windows
-
-The default settings don't add Python to your PATH environment variable,
-so your computer won't know where to look for it when Python runs
-(for security reason supposedly).
-
-##### If you're just installing Python now
-
-Follow the instructions here: [Windows Python installer instructions](docs/WININSTALL.md)
-
-##### If you've already installed Python with the default settings
-
-Follow the instructions here: [Add Python to PATH variable in Windows](docs/WINSETPATH.md)
+1. Go to https://www.python.org/downloads/
+2. Click the yellow button at the top to download the latest version of Python (e.g. 3.11.1)
+3. Complete installation
+   1. **On Mac or Linux**
+      - Follow the prompts and install using the default settings.
+   2. **On Windows**
+      1. If you're just installing Python now,
+      follow: [Windows Python installer instructions](docs/WININSTALL.md)
+      2. If you've already installed Python with the default settings,
+      follow: [Add Python to PATH variable in Windows](docs/WINSETPATH.md)
 
 ### 2. Choose an IDE
 
