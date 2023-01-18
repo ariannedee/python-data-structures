@@ -2,8 +2,6 @@
 
 - [Set your Python interpreter for your project](#set-your-python-interpreter-for-your-project)
 - [Install required external packages](#install-required-external-packages)
-- [View the .ipynb files](#view-the-ipynb-files)
-- [Install **Jupyter**](#install-required-external-packages)
 - [Run **Jupyter Lab**](#run-jupyter-lab)
 - [Run the .ipynb files](#run-the-ipynb-files)
 

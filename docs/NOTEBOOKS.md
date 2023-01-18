@@ -42,6 +42,8 @@ When you choose to launch a notebook, it opens up in a new browser tab.
 
 It has more limited capabilities.
 
+<img width="60%" src="img/jupyter_notebook.png">
+
 **Jupyter Lab** is more like an IDE in the browser.
 
 It provides a directory structure on the left, like PyCharm.
