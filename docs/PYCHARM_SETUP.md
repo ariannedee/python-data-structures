@@ -25,7 +25,7 @@ follow [these instructions](PYCHARM_INTERPRETER.md).
 
    - `numpy` and `pandas` to run the example code (.ipynb and .py files)
      
-   - `jupyter` to run the .ipynb files (_recommended_)
+   - `jupyter` to run the .ipynb notebook files (_recommended_)
 
    1. Search for the package name
    2. Select the matching one
@@ -61,6 +61,12 @@ you can launch [Jupyter Lab and Jupyter Notebook](NOTEBOOKS.md) from the termina
 
    <img width="60%" src="img/pycharm_jupyter_3b.png">
 
+### PyCharm Professional option
+
+You can open a specific notebook in Jupyter Notebook
+
+<img width="60%" src="img/pycharm_pro_open_jupyter.png">
+
 ## Run the .ipynb files
 
 [About notebooks](NOTEBOOKS.md)
@@ -69,13 +75,40 @@ you can launch [Jupyter Lab and Jupyter Notebook](NOTEBOOKS.md) from the termina
 
 Notebooks are view-only in PyCharm community.
 
-   <img width="60%" src="img/pycharm_community_ipynb.png">
+<img width="60%" src="img/pycharm_community_ipynb.png">
 
 You can run the corresponding _.py_ files and the results will print to the **Run** console.
 Alternatively, you can open the Python Console and copy and paste the contents of a code cell to run it.
 
-### In PyCharm Professional
+### Run a single cell
 
-### In Jupyter Lab
+Select a code cell and click the run button to run it (or press SHIFT + ENTER).
 
-### In Jupyter Notebook
+**PyCharm Professional**
+
+<img width="60%" src="img/pycharm_pro_run_cell.png">
+
+**Jupyter Lab**
+
+<img width="60%" src="img/jupyter_lab_run_cell.png">
+
+**Jupyter Notebook**
+
+<img width="60%" src="img/jupyter_notebook_run_cell.png">
+
+### Run all
+
+This restarts the Python session, clearing any variables,
+and runs the whole notebook from top to bottom
+
+**PyCharm Professional**
+
+<img width="60%" src="img/pycharm_pro_run_all.png">
+
+**Jupyter Lab**
+
+<img width="60%" src="img/jupyter_lab_run_all.png">
+
+**Jupyter Notebook**
+
+<img width="60%" src="img/jupyter_notebook_run_all.png">
