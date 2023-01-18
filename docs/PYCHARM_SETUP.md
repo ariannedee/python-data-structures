@@ -43,7 +43,7 @@ follow [these instructions](PYCHARM_INTERPRETER.md).
 ## Run **Jupyter Lab**
 
 Once you've installed Jupyter in your Python interpreter, 
-you can launch Jupyter Lab and Jupyter Notebook from the terminal.
+you can launch [Jupyter Lab and Jupyter Notebook](NOTEBOOKS.md) from the terminal.
 
 1. Open a terminal and input the command `jupyter lab` or `jupyter notebook`
 
@@ -64,6 +64,8 @@ you can launch Jupyter Lab and Jupyter Notebook from the terminal.
    <img width="60%" src="img/pycharm_jupyter_3b.png">
 
 ## Run the .ipynb files
+
+[About notebooks](NOTEBOOKS.md)
 
 ### In PyCharm Community
 
