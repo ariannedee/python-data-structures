@@ -73,6 +73,7 @@ In addition to viewing the example notebooks,
 you may want an IDE to help manage your environment.
 
 [Go here](docs/PYCHARM_SETUP.md) for instructions on how to use **PyCharm community** to:
+- Set your Python interpreter for your project
 - Install required external packages (**NumPy** and **Pandas**)
 - Install **Jupyter**
 - Run **Jupyter Lab** from the Terminal
@@ -112,7 +113,7 @@ Instructions:
 
 1. Make sure your Python interpreter is set (in the bottom right toolbar).
 2. On the bottom toolbar, there is an option for **Python Packages**.
-3. Search for `jupyter`, click on the one with the exact name, and click **Add Package**
+3. Search for `jupyter`, click on the one with the exact name, and click **Install package**
 4. Repeat for `numpy` and `pandas`
 
 
@@ -137,4 +138,4 @@ Once in Settings:
 - **Note:** For this last step, you may have to search the internet for where Python gets installed by default on your operating system
 
 If you are having trouble configuring your Python version, you can find visual instructions
-here: [Python interpreter setup](docs/PyCharm_interpreter.md)
+here: [Python interpreter setup](docs/PYCHARM_INTERPRETER.md)
