@@ -11,16 +11,16 @@ empty_list_2 = list()
 list_with_contents = ['a', 'b', 1, 2]
 
 from_sequence = list('12345')
-print(from_sequence)
+from_sequence
 # -
 
 from_dict = list({'hello': 'world', 'foo': 'bar'})
-print(from_dict)
+from_dict
 
 # You can also build lists using **list comprehensions**
 
 powers_of_2 = [2 ** i for i in range(12)]
-print(powers_of_2)
+powers_of_2
 
 # We will look more at list comprehensions in the second hour of the class.
 
@@ -34,7 +34,7 @@ print(powers_of_2)
 # Indices start at 0 and go to `len(sequence) - 1`.
 
 sequence = list('abcde')
-print(sequence)
+sequence
 
 print(f'0: {sequence[0]}')
 end = len(sequence) - 1
@@ -43,7 +43,7 @@ print(f'{end}: {sequence[end]}')
 try:
     sequence[100]
 except IndexError as e:
-    print(repr(e))
+    repr(e)
 
 # You can also go from the end of the list at `-1` to the beginning at `-len(sequence)`
 
@@ -61,42 +61,42 @@ print(f'{beginning}: {sequence[beginning]}')
 #
 # If a number is missing, its value is assumed to be either beginning or end of the list, depending on the context.
 
-print(sequence[1:3])  # indices 1 and 2
+sequence[1:3]  # indices 1 and 2
 
-print(sequence[:4])  # beginning (0) to 3
+sequence[:4]  # beginning (0 to 3
 
-print(sequence[2:])  # 2 to end (4)
+sequence[2:]  # 2 to end (4
 
-print(sequence[:])  # full list
+sequence[:]  # full list
 
-print(sequence[::2])  # every second item
+sequence[::2]  # every second item
 
-print(sequence[2::-1])  # 2, 1, 0
+sequence[2::-1]  # 2, 1, 0
 
-print(sequence[::-1])  # reversed
+sequence[::-1]  # reversed
 
 # ## Updating contents
 
 sequence[0] = 'new'  # update existing item
-print(sequence)
+sequence
 
 del sequence[-1]  # deleting by index
-print(sequence)
+sequence
 
 sequence.append('end')  # add item to the end
-print(sequence)
+sequence
 
 sequence.insert(1, 'a')  # add item at index
-print(sequence)
+sequence
 
 # ## Checking containment
 
-print('e' in sequence)
+'e' in sequence
 
 # ## Looping
 
 for item in sequence:
-    print(item * 2)
+    item * 2
 
 # ## List implementation
 #
