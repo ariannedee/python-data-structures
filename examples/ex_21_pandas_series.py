@@ -66,9 +66,9 @@ f['a'] = 100
 f
 
 try:
-	f['f']
+    f['f']
 except KeyError as e:
-	print(repr(e))
+    print(repr(e))
 
 f.get('f', np.nan)
 
@@ -97,25 +97,52 @@ f + g
 #
 # You can label any `Series` with a `name`
 
-s = pd.Series(np.random.randn(5), name="random series")
-s
+h = pd.Series(np.random.randn(5), name="random series")
+h
 
-s.name
+h.name
 
-# In a `DataFrame`, the `Series` name will be the column label.
-#
-# ### Renaming
-#
 # You can change the name of a `Series` by setting the `name` attribute.
 
-s.name = 'Series 1'
-s
+h.name = 'Series 1'
+h
 
-# Use the `rename()` method to create a copy with a new name.
+# In a `DataFrame`, the `Series` name will be the column label.
 
-s2 = s.rename('Series 2')
-s2
+# ## Methods
+#
+# You can chain methods that return a `Series`. 
+# There are lots of common math and comparison methods.
 
-s
+i = h.mul(10).round(1)
+i
 
+# You can apply a custom function and do aggregating/grouping.
 
+i.apply(lambda x: x ** 2).groupby(i < 0).mean()
+
+# You can sort by index or values
+
+i = i.sort_values()
+i
+
+i.rank()
+
+# And there's so much more you can do.
+#
+# ## Accessors
+#
+# You can also access a lot of type-specific methods for strings, datetimes and some Pandas-specific dtypes.
+
+j = pd.Series(['Yes', 'no', 'y', '', 'NO'], name='votes')
+j
+
+j = j.str.upper()
+j
+
+j[j.str.contains('Y')] = 'Yes'
+j[j.str.contains('N')] = 'No'
+j
+
+j[~j.isin(['Yes', 'No'])] = 'Unknown'
+j
