@@ -1,6 +1,6 @@
 # # Dict Comprehensions
 # Just like list comprehensions, but use a different syntax to create dicts.
-# ## Basic comprehsions
+# ## Basic comprehensions
 # Format: `{key_exp: value_exp for member in iterable}`
 
 powers_of_2 = {i: 2**i for i in range(2, 10, 2)}

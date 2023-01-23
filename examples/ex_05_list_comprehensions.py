@@ -1,6 +1,5 @@
 # # List Comprehensions
-#
-# ## Basic comprehsions
+# ## Basic comprehensions
 
 squares = [i ** 2 for i in range(10)]
 squares
@@ -45,7 +44,6 @@ for i in range(10):
 is_even
 
 # ## Nested comprehensions
-#
 # ### Nested lists
 
 coords = [
