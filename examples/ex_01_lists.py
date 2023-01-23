@@ -1,26 +1,18 @@
 # # Lists
-#
 # ## Brief summary of Python lists
-#
 # ### Creating lists
 
-# +
-empty_list_1 = []
-empty_list_2 = list()
+list()
 
-list_with_contents = ['a', 'b', 1, 2]
+['a', 'b', 1, 2]
 
-from_sequence = list('12345')
-from_sequence
-# -
+list('12345')
 
-from_dict = list({'hello': 'world', 'foo': 'bar'})
-from_dict
+list({'hello': 'world', 'foo': 'bar'})  # Only takes keys
 
 # You can also build lists using **list comprehensions**
 
-powers_of_2 = [2 ** i for i in range(12)]
-powers_of_2
+[2 ** i for i in range(12)]
 
 # We will look more at list comprehensions in the second hour of the class.
 
@@ -28,17 +20,17 @@ powers_of_2
 # These also work on any sequence (tuple, string, bytearray, etc)
 #
 # ### Getting an item via index (indexing)
-#
 # The format is `sequence[index]`
 #
-# Indices start at 0 and go to `len(sequence) - 1`.
+# Indices start at `0` and go to `len(sequence) - 1`.
 
 sequence = list('abcde')
 sequence
 
-print(f'0: {sequence[0]}')
+sequence[0]
+
 end = len(sequence) - 1
-print(f'{end}: {sequence[end]}')
+sequence[end]
 
 try:
     sequence[100]
@@ -47,9 +39,10 @@ except IndexError as e:
 
 # You can also go from the end of the list at `-1` to the beginning at `-len(sequence)`
 
-print(f'-1: {sequence[-1]}')
+sequence[-1]
+
 beginning = -len(sequence)
-print(f'{beginning}: {sequence[beginning]}')
+sequence[beginning]
 
 # ### Getting a sublist (slicing)
 #
@@ -93,42 +86,14 @@ sequence
 
 'e' in sequence
 
+'a' in sequence
+
 # ## Looping
 
-for item in sequence:
-    item * 2
+for value in sequence:
+    print(value * 2)
 
-# ## List implementation
-#
-# (In CPython)
-#
-# Lists in Python store:
-# 1. The size of the list
-# 2. An array of pointers
-# 3. Values contained in the list (pointed to by an item in the above array)
-#
-# When you **update** the value at an index:
-# 1. The new value is stored
-# 2. The pointer at that index is updated to the new location
-#
-# When you **append** a new item, Python:
-# 1. Increases the size of the list by 1
-# 2. Stores the new item value
-# 3. Adds a pointer to the array of pointers
-#
-# **Note about appends**: So that Python doesn't have to update the size of the pointer array all the time, more space is allocated than is needed. Then when all spaces are filled, the array expands again. Therefore, some appends will take longer than others.
-#
-# If you **insert** an item at an index, it is the same as appending, except in step 3, the array has to move pointers around so the new pointer can be inserted at the proper location.
-#
-# If you **delete** an item, unless it's at the end, the array has to move pointers around to fill in the empty spot.
+# If you need the index as well, use `.enumerate()`
 
-# ### Time complexity of operations
-#
-# **Fast**:
-# - Updating existing item
-# - Appending to the end
-#
-# **Slow**:
-# - Deleting an item
-# - Inserting at an index
-# - Checking containment
+for i, value in enumerate(sequence):
+    print(f'{i}: {value}')
