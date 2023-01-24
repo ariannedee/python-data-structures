@@ -20,7 +20,7 @@ dict(((1, 2), (3, 4)))  # Must be a sequence of 2-item lists/tuples
 # ### Valid dict types
 # `dict` **values** can be anything.
 #
-# `dict` **keys** must be __hashable__. Basically, if it's a builtin type, it can't be mutable (like `list`, `dict` or `set`. If it's a custom class, it must implement a special method for hashing and checking equality.
+# `dict` **keys** must be __hashable__. Basically, if it's a builtin type, it can't be mutable (like `list`, `dict` or `set`). If it's a custom class, it must implement a special method for hashing and checking equality.
 #
 # Keys use `==` to determine key equality. So `1`, `1.0` and `True` all map to the same key.
 
