@@ -13,7 +13,7 @@ import pandas as pd
 
 df = pd.read_csv('../data/Programming language survey.csv', header=0, names=('timestamp', 'languages', 'other_langs', 'age'), usecols=('languages', 'other_langs', 'age'))
     
-df
+df.head()
 
 # +
 import re
@@ -90,3 +90,5 @@ other_langs = df3.explode('other_langs')
 other_langs
 
 other_langs.value_counts()
+
+
