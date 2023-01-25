@@ -1,3 +1,6 @@
+# # Survey analysis
+# Analyse the results from the [languages survey](https://forms.gle/5b3mZRVcgAsoNG1FA)
+
 all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'C', 'C++', 'C#',
              'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift',
              'Visual Basic', 'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly']
@@ -22,7 +25,7 @@ pprint(langs_by_entry)
 # -
 
 # ## Find number of languages known
-# Print {# known by class} / {# in list} languages known by this class (as %).
+# Print `"{# known by class} / {# in list} languages known by this class (as %)"`.
 # E.g. 12/21 languages known by this class (57%)
 
 # +
