@@ -1,9 +1,10 @@
 # # Survey analysis
 # Analyse the results from the [languages survey](https://forms.gle/5b3mZRVcgAsoNG1FA)
 
-all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'C', 'C++', 'C#',
-             'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift',
-             'Visual Basic', 'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly']
+all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C++', 'C#',
+             'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift', 'Visual Basic',
+             'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly', 'Kotlin', 'Dart', 'Scala',
+             'Lua', 'Delphi', 'Haskell', 'Julia', 'Clojure', 'Elixir', 'Pascal']
 
 # # Load data
 
@@ -11,7 +12,8 @@ all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'C', 'C++', 'C
 from pprint import pprint
 import pandas as pd
 
-df = pd.read_csv('../data/Programming language survey.csv', header=0, names=('timestamp', 'languages', 'other_langs', 'age'), usecols=('languages', 'other_langs', 'age'))
+filename = '../data/Programming language survey.csv'
+df = pd.read_csv(filename, header=0, names=('timestamp', 'languages', 'other_langs', 'years'), usecols=('languages', 'other_langs', 'years'))
     
 df.head()
 
@@ -54,34 +56,33 @@ langs_count
 for i, (lang, count) in enumerate(langs_count.iteritems(), start=1):
     print(f'{i}: {lang} ({count})')
 
-# ## Bonus: rank languages known by age group
+# ## Bonus: rank languages known by number of years programming
 
 # +
-age_ranges = ['<= 19', '20 - 29', '30 - 39', '40 - 49', '50 - 59', '>= 60', 'Unknown']
+year_ranges = ['< 1', '1 - 5', '5 - 10', '10 - 15', '15 - 20', '> 20', 'Unknown']
 
 df2 = df
-df2['age'] = pd.Categorical(df['age'], categories=age_ranges)
-df2['age'].fillna("Unknown", inplace=True)
+df2['years'] = pd.Categorical(df['years'], categories=year_ranges)
+df2['years'].fillna("Unknown", inplace=True)
 df2['total'] = 1
 df2
 # -
 
-by_age = df2.groupby('age').sum()
-by_age
+by_years = df2.groupby('years').sum()
+by_years
 
-for index in by_age.index:
-    num_respondents = by_age.loc[index, 'total']
+for index in by_years.index:
+    num_respondents = by_years.loc[index, 'total']
     print(f"For {index} ({num_respondents})")
     if num_respondents == 0:
         print('  No data')
     else:
-        print(by_age.loc[index, by_age.loc[index] >= 1].sort_values(ascending=False).to_string())
+        print(by_years.loc[index, by_years.loc[index] >= 1].sort_values(ascending=False).to_string())
     print()
 
 # ## Bonus: other languages known
 
-df3 = df.loc[:,['other_langs', 'age']]
-df3.index = df3.pop('age')
+df3 = df.loc[:,['other_langs']]
 df3
 
 df3['other_langs'] = df3['other_langs'].str.split(',')

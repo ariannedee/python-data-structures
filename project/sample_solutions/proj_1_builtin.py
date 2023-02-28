@@ -1,9 +1,10 @@
 # # Survey analysis
 # Analyse the results from the [languages survey](https://forms.gle/5b3mZRVcgAsoNG1FA)
 
-all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'C', 'C++', 'C#',
-             'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift',
-             'Visual Basic', 'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly']
+all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C++', 'C#',
+             'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift', 'Visual Basic',
+             'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly', 'Kotlin', 'Dart', 'Scala',
+             'Lua', 'Delphi', 'Haskell', 'Julia', 'Clojure', 'Elixir', 'Pascal']
 
 # ## Load data
 
