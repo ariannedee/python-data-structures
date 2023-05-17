@@ -22,8 +22,7 @@ pd.DataFrame(dict_of_lists)
 dict_of_dicts = {"C": {100: 1, 101: 2, 102: 3}, "D": {100: 'abc', 101: 'def', 102: 'ghi'}}
 pd.DataFrame(dict_of_dicts)
 
-# Subset of data from the 2022 Stack Overflow Developer Survey
-df = pd.read_csv('languages.csv')
+df = pd.read_csv('languages.csv')  # Subset of data from the 2022 Stack Overflow Developer Survey
 df
 
 # ## Index and columns

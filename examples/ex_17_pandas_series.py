@@ -50,6 +50,8 @@ f[0]
 
 f[:2]
 
+f > f.median()
+
 f[f > f.median()]
 
 f[[4, 3, 1]]

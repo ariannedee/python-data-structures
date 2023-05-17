@@ -17,6 +17,13 @@ b
 c = ('Goodbye')
 c
 
+# ## Cannot update tuples
+
+try:
+    b[0] = 'Howdy'
+except Exception as e:
+    print(repr(e))
+
 # ## Slicing and indexing
 #
 # It's done just like lists!
@@ -35,6 +42,11 @@ print(lat)
 print(lon)
 
 # ## When to use tuples
+
+# ### Representing objects/heterogeneous data
+
+blue = 0, 0, 255
+colours = ['red', 'green', blue]
 
 # ### Swap variable names
 #
@@ -96,6 +108,8 @@ for tup in enumerate('abc'):
 # +
 nums = [1, 2, 3]
 letters = ['a', 'b', 'c']
+
+print(list(zip(nums, letters)))
 
 for num, letter in zip(nums, letters):
     print(num * letter)

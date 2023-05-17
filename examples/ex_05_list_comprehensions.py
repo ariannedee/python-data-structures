@@ -1,4 +1,6 @@
 # # List Comprehensions
+# General format:
+# `new_list = [expression for member in iterable]`
 # ## Basic comprehensions
 
 squares = [i ** 2 for i in range(10)]
@@ -15,6 +17,8 @@ squares
 # -
 
 # ## Using conditionals
+# Generalized:
+# `new_list = [expression for member in iterable if condition]`
 
 evens = [i for i in range(10) if i % 2 == 0]
 evens
@@ -31,6 +35,15 @@ evens
 # -
 
 # ## With ternary operator
+
+# +
+x = 'a' if False else 'b'
+
+if True:
+    x = 'a'
+else:
+    x = 'b'
+# -
 
 is_even = [True if i % 2 == 0 else False for i in range(10)]
 is_even
@@ -78,6 +91,10 @@ for x in range(3):
     for y in range(3):
         coords.append((x, y))
 coords
+
+num_lists = [[7, 2], [6], [1, 4, 5], [-2, 8, 0]]
+nums = [num for num_list in num_lists for num in num_list]
+nums
 
 # ## Complex comprehension example
 

@@ -35,7 +35,11 @@ for key, value in b.items():
     print(f'{key}: {value}')
 
 # ## Pop item
-#     Additional method to pop the last 
+# Additional method to remove the last key-value pair and return it.
+
+b.popitem()
+
+b
 
 # ## Reorder items
 # `.move_to_end(key, last=True)` will move the item with `key` either to the end (`last=True`) or the front (`last=False`).
@@ -43,8 +47,10 @@ for key, value in b.items():
 b.move_to_end(1)
 b
 
-b.move_to_end(0, last=False)
-b
+try:
+    b.move_to_end(0, last=False)
+except Exception as e:
+    print(repr(e))
 
 for key, value in b.items():
     print(f'{key}: {value}')

@@ -5,7 +5,7 @@
 # ## Basic comprehensions
 
 num_list = [1, 2, 3, 3, 8]
-num_set = {num for num in num_list}
+num_set = {num ** 2 for num in num_list}
 num_set
 
 # This is equivalent to:

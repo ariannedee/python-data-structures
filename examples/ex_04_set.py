@@ -4,8 +4,7 @@
 # - cannot contain duplicates
 # - cannot access individual items (except by iterating over)
 #
-# ## Brief summary of Python sets
-# ### Creating sets
+# ## Creating sets
 
 set()
 
@@ -100,7 +99,7 @@ s.isdisjoint({2, 3})
 # ## Looping
 # Sets have an undefined order.
 
-for element in {'a', 'b', 'c'}:
+for element in {'b', 'a', 'c'}:
     print(element)
 
 # ## Set operations

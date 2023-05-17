@@ -30,8 +30,12 @@ f'Took {round(end - start, 4)}s'
 #
 # `any()`, `all()`, `min()`, `max()` and `sum()` can all accept generators.
 
+# +
 from random import random
-min((random() for i in range(10**3)))
+
+print(min((random() for i in range(10**4))))
+print(max((random() for i in range(10**4))))
+# -
 
 # To create a tuple, cast a generator using the `tuple()`.
 

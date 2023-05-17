@@ -46,7 +46,7 @@ print(e.shape)
 # Play around with setting a dtype to see resulting initial content.
 
 
-np.empty((3, 4), dtype='float64')
+np.empty((2, 3), dtype='float64')
 
 
 # ## Create array with range of elements
@@ -116,7 +116,9 @@ ar
 ar[0, 1, 2, 3]
 
 
-ar_ints = ar.astype(int)
+ar[0][1][2][3]
+
+ar_ints = ar.astype(np.int16)
 ar_ints
 
 # ### Array axes

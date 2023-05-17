@@ -1,6 +1,6 @@
 # # Lists
-# ## Brief summary of Python lists
-# ### Creating lists
+# Ordered collection of objects, with easy access to items by position (index).
+# ## Creating lists
 
 list()
 
@@ -34,8 +34,8 @@ sequence[end]
 
 try:
     sequence[100]
-except IndexError as e:
-    repr(e)
+except Exception as e:
+    print(repr(e))
 
 # You can also go from the end of the list at `-1` to the beginning at `-len(sequence)`
 

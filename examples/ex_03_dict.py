@@ -2,8 +2,7 @@
 # Dictionaries are a type of key-value mapping object.
 #
 # Instead of accessing items by index (position), we get them through via keys.
-# ## Brief summary of Python dicts
-# ### Creating dicts
+# ## Creating dicts
 
 dict()
 
