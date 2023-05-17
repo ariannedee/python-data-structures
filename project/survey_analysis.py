@@ -29,8 +29,8 @@ with open('data/Programming language survey.csv') as file:
 
 
 # ## Rank languages by most commonly known
-# Print each language as `"{position}: {language} ({count})"`, in order from most to least known
+# Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
-# e.g. **1: Python (30)**
+# e.g. **1: Python (93%)**
 
 
