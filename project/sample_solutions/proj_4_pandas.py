@@ -13,7 +13,7 @@ from pprint import pprint
 import pandas as pd
 
 filename = '../data/Programming language survey.csv'
-df = pd.read_csv(filename, header=0, names=('timestamp', 'languages', 'other_langs', 'years'), usecols=('languages', 'other_langs', 'years'))
+df = pd.read_csv(filename, header=0, names=('timestamp', 'languages', 'years'), usecols=('languages', 'years'))
     
 df.head()
 
@@ -42,19 +42,19 @@ print(f"{len(known_langs)}/{len(all_langs)} languages known by this class ({perc
 print('Not known:')
 ', '.join(df.columns[df.eq(False).all()].tolist())
 
-# # Rank languages by most commonly known
-# Print each language as `"{position}: {language} ({count})"`, in order from most to least known
+# ## Rank languages by most commonly known
+# Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
-# e.g. **1: Python (30)**
+# e.g. **1: Python (93%)**
 
-langs_count = df.iloc[:, 3:].sum()
+langs_count = df.iloc[:, 2:].sum()/len(df) * 100
 langs_count
 
 langs_count.sort_values(ascending=False, inplace=True)
 langs_count
 
 for i, (lang, count) in enumerate(langs_count.iteritems(), start=1):
-    print(f'{i}: {lang} ({count})')
+    print(f'{i}: {lang} ({round(count)}%)')
 
 # ## Bonus: rank languages known by number of years programming
 
@@ -79,17 +79,3 @@ for index in by_years.index:
     else:
         print(by_years.loc[index, by_years.loc[index] >= 1].sort_values(ascending=False).to_string())
     print()
-
-# ## Bonus: other languages known
-
-df3 = df.loc[:,['other_langs']]
-df3
-
-df3['other_langs'] = df3['other_langs'].str.split(',')
-df3.dropna(axis=0, inplace=True)
-other_langs = df3.explode('other_langs')
-other_langs
-
-other_langs.value_counts()
-
-

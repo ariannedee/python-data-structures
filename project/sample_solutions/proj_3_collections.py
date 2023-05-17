@@ -14,7 +14,7 @@ from pprint import pprint
 
 with open('../data/Programming language survey.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=('timestamp', 'languages', 'other_langs', 'age'))
+    reader = csv.DictReader(file, fieldnames=('timestamp', 'languages', 'years'))
     langs_by_entry = [line['languages'].split(';') for line in reader]
 
 pprint(langs_by_entry)
@@ -41,9 +41,9 @@ not_known = set(all_langs) - langs_set
 print(not_known)
 
 # ## Rank languages by most commonly known
-# Print each language as `"{position}: {language} ({count})"`, in order from most to least known
+# Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
-# e.g. **1: Python (30)**
+# e.g. **1: Python (93%)**
 
 from collections import Counter
 

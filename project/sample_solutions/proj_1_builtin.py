@@ -16,7 +16,7 @@ langs_by_entry = []
 
 with open('../data/Programming language survey.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=('timestamp', 'languages', 'other_langs', 'age'))
+    reader = csv.DictReader(file, fieldnames=('timestamp', 'languages', 'age'))
     for line in reader:
         langs = line['languages'].split(';')
         langs_by_entry.append(langs)
@@ -46,9 +46,9 @@ not_known = set(all_langs) - langs_set
 print(not_known)
 
 # ## Rank languages by most commonly known
-# Print each language as `"{position}: {language} ({count})"`, in order from most to least known
+# Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
-# e.g. **1: Python (30)**
+# e.g. **1: Python (93%)**
 
 langs_count = {}
 for langs in langs_by_entry:
@@ -65,7 +65,7 @@ def sort_func(x):
 
 
 langs_count_list = list(langs_count.items())
-langs_count_list.sort(key=lambda x: -x[1])
+langs_count_list.sort(key=sort_func)
 langs_count_list
 
 # +
@@ -73,6 +73,3 @@ num_people = len(langs_by_entry)
 
 for i, (name, count) in enumerate(langs_count_list, start=1):
     print(f"{i}: {name} ({round(count / num_people * 100)}%)")
-# -
-
-
