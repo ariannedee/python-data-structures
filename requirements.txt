@@ -1,3 +1,5 @@
 jupyter
+jupyterlab
+jupytext
 numpy
 pandas
