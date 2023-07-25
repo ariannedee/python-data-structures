@@ -1,26 +1,30 @@
 # # Survey analysis
 # Analyse the results from the [languages survey](https://forms.gle/5b3mZRVcgAsoNG1FA)
 
+# +
 all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C++', 'C#',
              'Ruby', 'R', 'Matlab', 'Go', 'Rust', 'Objective-C', 'Swift', 'Visual Basic',
              'Perl', 'Cobol', 'Fortran', 'Lisp', 'Assembly', 'Kotlin', 'Dart', 'Scala',
              'Lua', 'Delphi', 'Haskell', 'Julia', 'Clojure', 'Elixir', 'Pascal']
 
+print(len(all_langs))
+# -
+
 # ## Load data
 
 # +
 import csv
-from pprint import pprint
 
-langs_by_entry = []
+languages_known_by_person = []
 
-with open('../data/Programming language survey.csv') as file:
+with open('data/Programming language survey.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=('timestamp', 'languages', 'age'))
+    reader = csv.DictReader(file, fieldnames=['timestamp', 'langs', 'years'])
     for line in reader:
-        langs = line['languages'].split(';')
-        langs_by_entry.append(langs)
-pprint(langs_by_entry)
+        languages_known_by_person.append(line['langs'].split(', '))
+
+print(len(languages_known_by_person))
+print(languages_known_by_person[0])
 # -
 
 # ## Find number of languages known
@@ -29,47 +33,43 @@ pprint(langs_by_entry)
 # E.g. **12/21 languages known by this class (57%)**
 
 # +
-langs_set = set()
-for langs in langs_by_entry:
-    langs_set.update(langs)
+langs_known = set()
+for langs in languages_known_by_person:
+    langs_known.update(langs)
 
-num_known = len(langs_set)
-num_all = len(all_langs)
-percent = round(num_known / num_all * 100)
-
-print(f"{num_known} / {num_all} languages known by this class ({percent}%)")
+print(
+    f"{len(langs_known)} / {len(all_langs)} languages known by this class (as {round(len(langs_known) / len(all_langs) * 100)}%)")
 # -
 
 # ## List languages not known by anyone in the class
 
-not_known = set(all_langs) - langs_set
-print(not_known)
+set(all_langs) - langs_known
 
 # ## Rank languages by most commonly known
 # Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
 # e.g. **1: Python (93%)**
 
+# +
 langs_count = {}
-for langs in langs_by_entry:
+for langs in languages_known_by_person:
     for lang in langs:
         if lang not in langs_count:
             langs_count[lang] = 0
+
         langs_count[lang] += 1
+
 print(langs_count)
 
-
 # +
-def sort_func(x):
-    return -x[1]
+langs_count_by_frequency = list(langs_count.items())
+
+langs_count_by_frequency.sort(key=lambda x: -x[1])
+langs_count_by_frequency
+# -
+
+num_people = len(languages_known_by_person)
+for pos, (lang, count) in enumerate(langs_count_by_frequency, start=1):
+    print(f"{pos}: {lang} ({round(count / num_people * 100)}%)")
 
 
-langs_count_list = list(langs_count.items())
-langs_count_list.sort(key=sort_func)
-langs_count_list
-
-# +
-num_people = len(langs_by_entry)
-
-for i, (name, count) in enumerate(langs_count_list, start=1):
-    print(f"{i}: {name} ({round(count / num_people * 100)}%)")

@@ -1,43 +1,78 @@
-"Timestamp","What programming languages do you have experience in?","How many years have you been programming?"
-"2023/05/17 3:37:31 pm GMT-6","Python;Java;JavaScript;C;Ruby;R","10 - 15"
-"2023/05/17 3:37:46 pm GMT-6","Python;Java","1 - 5"
-"2023/05/17 3:37:53 pm GMT-6","Python;JavaScript","1 - 5"
-"2023/05/17 3:38:03 pm GMT-6","Python","< 1"
-"2023/05/20 11:54:24 am GMT-6","Python;Java;JavaScript;Visual Basic;Perl","10 - 15"
-"2023/05/22 1:54:11 am GMT-6","Python;Java;SQL;C;C++;R;Matlab;Visual Basic;Assembly","10 - 15"
-"2023/05/22 3:10:35 pm GMT-6","Python","< 1"
-"2023/05/23 7:58:29 am GMT-6","Python;Java;JavaScript;C;C++;R;Fortran","> 20"
-"2023/05/23 1:54:23 pm GMT-6","SQL","5 - 10"
-"2023/05/24 8:42:46 am GMT-6","Python;Java;JavaScript;SQL;R;Visual Basic;Perl;Fortran;Lisp;Pascal","10 - 15"
-"2023/05/24 8:49:05 am GMT-6","Python;Java;JavaScript;SQL;C;Visual Basic","> 20"
-"2023/05/24 9:02:40 am GMT-6","Python;SQL;Visual Basic","1 - 5"
-"2023/05/24 9:16:53 am GMT-6","C;C++","5 - 10"
-"2023/05/24 9:51:12 am GMT-6","Java;C;C++","10 - 15"
-"2023/05/24 9:58:05 am GMT-6","Python;JavaScript;TypeScript;PHP;Go","10 - 15"
-"2023/05/24 9:59:29 am GMT-6","Python;JavaScript;SQL","1 - 5"
-"2023/05/24 10:02:12 am GMT-6","Python;Java;SQL;C;Perl;Lisp","> 20"
-"2023/05/24 10:06:18 am GMT-6","Java;JavaScript;SQL;C;C++;C#","> 20"
-"2023/05/24 10:14:52 am GMT-6","Python;C++;R","10 - 15"
-"2023/05/24 10:14:52 am GMT-6","Python;JavaScript;PHP;SQL;C;C++;Ruby;Go;Visual Basic;Assembly;Pascal","> 20"
-"2023/05/24 10:14:56 am GMT-6","Python;C;C++;C#","1 - 5"
-"2023/05/24 10:15:00 am GMT-6","C;C++;C#","10 - 15"
-"2023/05/24 10:15:00 am GMT-6","Python;Java;C;C++;C#;Visual Basic;Fortran;Lisp;Assembly;Pascal","10 - 15"
-"2023/05/24 10:15:04 am GMT-6","Java;JavaScript;TypeScript;SQL","1 - 5"
-"2023/05/24 10:15:05 am GMT-6","Python;Java;JavaScript;TypeScript;SQL;C;Cobol","15 - 20"
-"2023/05/24 10:15:09 am GMT-6","Java;SQL;Fortran","> 20"
-"2023/05/24 10:15:14 am GMT-6","Python;SQL;C;C++;Go;Visual Basic;Assembly;Delphi;Pascal","10 - 15"
-"2023/05/24 10:15:21 am GMT-6","Java;JavaScript;SQL;C#;Visual Basic","15 - 20"
-"2023/05/24 10:15:22 am GMT-6","Python;Java;JavaScript;TypeScript;PHP;SQL;C;C++;C#;Go;Rust;Objective-C;Swift;Visual Basic;Perl;Cobol;Fortran;Lisp;Assembly;Julia;Clojure;Pascal","> 20"
-"2023/05/24 10:15:39 am GMT-6","SQL;C;C++;R;Perl;Fortran;Pascal","> 20"
-"2023/05/24 10:15:57 am GMT-6","Python;Java;JavaScript;TypeScript;PHP;Objective-C;Visual Basic;Kotlin","15 - 20"
-"2023/05/24 10:16:27 am GMT-6","Python;SQL;R;Visual Basic","1 - 5"
-"2023/05/24 10:16:59 am GMT-6","Python;Java;JavaScript;TypeScript;SQL;Ruby;Assembly;Kotlin;Clojure","> 20"
-"2023/05/24 10:29:18 am GMT-6","Python;JavaScript;PHP;SQL;Visual Basic;Fortran;Delphi;Pascal","> 20"
-"2023/05/24 10:31:07 am GMT-6","Python;JavaScript;SQL;Go;Perl","1 - 5"
-"2023/05/24 10:31:14 am GMT-6","Python;SQL","15 - 20"
-"2023/05/24 10:31:27 am GMT-6","Python;Java;JavaScript;SQL;C;Perl;Cobol","> 20"
-"2023/05/24 10:31:29 am GMT-6","Python;JavaScript;SQL;Visual Basic","1 - 5"
-"2023/05/24 10:31:38 am GMT-6","Python;Swift","< 1"
-"2023/05/24 10:31:39 am GMT-6","Python;SQL;Visual Basic;Cobol;Clojure","1 - 5"
-"2023/05/24 10:32:21 am GMT-6","Python;Java;JavaScript;SQL;C;C++;Swift;Lisp;Assembly;Dart;Lua;Haskell;Julia;Clojure;Elixir;Pascal","> 20"
-"2023/05/24 12:10:24 pm GMT-6","Java;JavaScript;SQL","1 - 5"
+Timestamp,What programming languages do you have experience in?,How many years have you been programming?
+1/25/2023 13:47:57,Python,
+1/25/2023 13:48:18,Python,
+2/20/2023 10:52:08,"Python, JavaScript, TypeScript, C, Swift",
+5/17/2023 14:00:08,"Python, Java, JavaScript, R",1 - 5
+5/17/2023 14:00:15,Python,< 1
+5/17/2023 14:00:30,JavaScript,5 - 10
+5/17/2023 14:31:32,"Python, Java, Ruby",10 - 15
+5/17/2023 14:37:31,"Python, Java, JavaScript, C, Ruby, R",10 - 15
+5/17/2023 14:37:46,"Python, Java",1 - 5
+5/17/2023 14:37:54,"Python, JavaScript",1 - 5
+5/17/2023 14:38:03,Python,< 1
+5/20/2023 10:54:25,"Python, Java, JavaScript, Visual Basic, Perl",10 - 15
+5/22/2023 0:54:11,"Python, Java, SQL, C, C++, R, Matlab, Visual Basic, Assembly",10 - 15
+5/22/2023 14:10:36,Python,< 1
+5/23/2023 6:58:30,"Python, Java, JavaScript, C, C++, R, Fortran",> 20
+5/23/2023 12:54:23,SQL,5 - 10
+5/24/2023 7:42:46,"Python, Java, JavaScript, SQL, R, Visual Basic, Perl, Fortran, Lisp, Pascal",10 - 15
+5/24/2023 7:49:05,"Python, Java, JavaScript, SQL, C, Visual Basic",> 20
+5/24/2023 8:02:40,"Python, SQL, Visual Basic",1 - 5
+5/24/2023 8:16:54,"C, C++",5 - 10
+5/24/2023 8:51:13,"Java, C, C++",10 - 15
+5/24/2023 8:58:05,"Python, JavaScript, TypeScript, PHP, Go",10 - 15
+5/24/2023 8:59:29,"Python, JavaScript, SQL",1 - 5
+5/24/2023 9:02:12,"Python, Java, SQL, C, Perl, Lisp",> 20
+5/24/2023 9:06:19,"Java, JavaScript, SQL, C, C++, C#",> 20
+5/24/2023 9:14:53,"Python, C++, R",10 - 15
+5/24/2023 9:14:53,"Python, JavaScript, PHP, SQL, C, C++, Ruby, Go, Visual Basic, Assembly, Pascal",> 20
+5/24/2023 9:14:56,"Python, C, C++, C#",1 - 5
+5/24/2023 9:15:00,"C, C++, C#",10 - 15
+5/24/2023 9:15:01,"Python, Java, C, C++, C#, Visual Basic, Fortran, Lisp, Assembly, Pascal",10 - 15
+5/24/2023 9:15:05,"Java, JavaScript, TypeScript, SQL",1 - 5
+5/24/2023 9:15:06,"Python, Java, JavaScript, TypeScript, SQL, C, Cobol",15 - 20
+5/24/2023 9:15:10,"Java, SQL, Fortran",> 20
+5/24/2023 9:15:14,"Python, SQL, C, C++, Go, Visual Basic, Assembly, Delphi, Pascal",10 - 15
+5/24/2023 9:15:21,"Java, JavaScript, SQL, C#, Visual Basic",15 - 20
+5/24/2023 9:15:23,"Python, Java, JavaScript, TypeScript, PHP, SQL, C, C++, C#, Go, Rust, Objective-C, Swift, Visual Basic, Perl, Cobol, Fortran, Lisp, Assembly, Julia, Clojure, Pascal",> 20
+5/24/2023 9:15:40,"SQL, C, C++, R, Perl, Fortran, Pascal",> 20
+5/24/2023 9:15:58,"Python, Java, JavaScript, TypeScript, PHP, Objective-C, Visual Basic, Kotlin",15 - 20
+5/24/2023 9:16:28,"Python, SQL, R, Visual Basic",1 - 5
+5/24/2023 9:16:59,"Python, Java, JavaScript, TypeScript, SQL, Ruby, Assembly, Kotlin, Clojure",> 20
+5/24/2023 9:29:19,"Python, JavaScript, PHP, SQL, Visual Basic, Fortran, Delphi, Pascal",> 20
+5/24/2023 9:31:08,"Python, JavaScript, SQL, Go, Perl",1 - 5
+5/24/2023 9:31:14,"Python, SQL",15 - 20
+5/24/2023 9:31:28,"Python, Java, JavaScript, SQL, C, Perl, Cobol",> 20
+5/24/2023 9:31:30,"Python, JavaScript, SQL, Visual Basic",1 - 5
+5/24/2023 9:31:38,"Python, Swift",< 1
+5/24/2023 9:31:40,"Python, SQL, Visual Basic, Cobol, Clojure",1 - 5
+5/24/2023 9:32:22,"Python, Java, JavaScript, SQL, C, C++, Swift, Lisp, Assembly, Dart, Lua, Haskell, Julia, Clojure, Elixir, Pascal",> 20
+5/24/2023 11:10:24,"Java, JavaScript, SQL",1 - 5
+5/25/2023 4:23:33,"C, C++",5 - 10
+7/24/2023 3:10:35,"Python, Java, C, C++, Delphi, Pascal",< 1
+7/24/2023 11:12:29,"Python, Java, JavaScript, PHP, SQL, C++, C#, Visual Basic",> 20
+7/24/2023 18:25:47,"Python, C",1 - 5
+7/25/2023 7:17:33,"Python, Java, JavaScript, SQL, C, C++, Perl, Assembly, Pascal",1 - 5
+7/25/2023 7:18:55,"Python, Java, SQL, Perl",1 - 5
+7/25/2023 8:47:51,"Python, PHP, SQL, C, C++, Go, Visual Basic, Perl, Fortran, Assembly, Pascal",> 20
+7/25/2023 9:02:39,"Python, C, Objective-C, Visual Basic, Perl, Assembly",> 20
+7/25/2023 9:24:22,"Python, Java, JavaScript, TypeScript, SQL, C, Assembly, Delphi, Pascal",15 - 20
+7/25/2023 9:24:36,"Python, Java, PHP, SQL",1 - 5
+7/25/2023 9:24:37,"Python, Java, JavaScript, SQL",1 - 5
+7/25/2023 9:24:42,"Python, SQL, Go",5 - 10
+7/25/2023 9:24:45,"Python, Java, JavaScript, TypeScript, SQL, C, C++, Fortran",> 20
+7/25/2023 9:24:50,"Python, Matlab",15 - 20
+7/25/2023 9:24:55,"Python, Java, JavaScript, SQL",1 - 5
+7/25/2023 9:25:07,"Python, Java, JavaScript, SQL, C, C++, Perl, Assembly, Pascal",1 - 5
+7/25/2023 9:26:01,Python,1 - 5
+7/25/2023 9:26:09,"Python, SQL, Cobol",5 - 10
+7/25/2023 9:26:37,"Python, JavaScript",5 - 10
+7/25/2023 9:26:54,"Python, Java, C, C++, C#, Perl, Delphi, Pascal",10 - 15
+7/25/2023 9:27:04,"Python, JavaScript, SQL",1 - 5
+7/25/2023 9:27:17,"Python, PHP, SQL, C, C++, Go, Visual Basic, Perl, Fortran, Assembly, Pascal",> 20
+7/25/2023 9:29:52,Python,< 1
+7/25/2023 10:12:17,"Java, SQL, Swift",1 - 5
+7/25/2023 10:47:42,Java,15 - 20
+7/25/2023 10:48:04,"Python, JavaScript, C#",5 - 10
+7/25/2023 10:48:24,"Python, JavaScript, PHP, Ruby, Perl",15 - 20
+7/25/2023 12:25:38,Python,
