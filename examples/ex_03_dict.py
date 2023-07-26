@@ -8,7 +8,7 @@ dict()
 
 {'a': 1, 'b': 2}
 
-dict(((1, 2), (3, 4)))  # Must be a sequence of 2-item lists/tuples
+dict(((1, 2), [3, 4]))  # Must be a sequence of 2-item lists/tuples
 
 # You can also build dicts using **dict comprehensions**
 
