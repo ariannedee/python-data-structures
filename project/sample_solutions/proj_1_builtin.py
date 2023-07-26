@@ -17,7 +17,7 @@ import csv
 
 languages_known_by_person = []
 
-with open('data/Programming language survey.csv') as file:
+with open('../data/Programming language survey.csv') as file:
     file.readline()
     reader = csv.DictReader(file, fieldnames=['timestamp', 'langs', 'years'])
     for line in reader:
