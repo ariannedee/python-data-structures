@@ -1,0 +1,3 @@
+formats = "py:light,ipynb"
+notebook_metadata_filter="-all"
+cell_metadata_filter="-all"

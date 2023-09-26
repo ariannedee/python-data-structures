@@ -1,17 +1,17 @@
-"""
-Compare grades curving using NumPy ndarrays and Python lists/loops
+# # Compare grades curving
+# Compare NumPy ndarrays and Python lists/loops
 
-timer() is a decorator to log function execution times
-See Practical Decorators PyCon 2019 talk by Reuven M. Lerner to learn about decorators
-https://youtu.be/MjHpMCIvwsY?t=405
-"""
 import random
 import time
-
 import numpy as np
 
 CURVE_CENTER = 80
 
+
+# `timer()` is a decorator to log function execution times
+#
+# See Practical Decorators PyCon 2019 talk by Reuven M. Lerner to learn about decorators
+# https://youtu.be/MjHpMCIvwsY?t=405
 
 def timer(func):
     def inner(*args, **kwargs):
@@ -23,12 +23,17 @@ def timer(func):
     return inner
 
 
+# ## Numpy functions
+# Generate random grades
+
 @timer
 def np_grades(num):
     rg = np.random.default_rng(0)
     grades = rg.integers(20, 100, num)
     return grades
 
+
+# Curve grades
 
 @timer
 def np_curve(grades):
@@ -38,11 +43,16 @@ def np_curve(grades):
     return np.clip(new_grades, grades, 100)
 
 
+# ## Looping functions
+# Generate random grades
+
 @timer
 def loop_grades(num):
     grades = [random.randint(20, 100) for _ in range(num)]
     return grades
 
+
+# Curve grades
 
 @timer
 def loop_curve(grades):
@@ -52,10 +62,14 @@ def loop_curve(grades):
     return new_grades
 
 
-if __name__ == '__main__':
-    # Time how long it takes to curve 10 up to 10,000,000 grades
-    for num_zeroes in range(1, 8):
-        num_grades = 10 ** num_zeroes
-        print(f'\n--- {num_grades:,} GRADES ---')
-        np_curve(np_grades(num_grades)).tolist()
-        loop_curve(loop_grades(num_grades))
+# ## Time comparison of numpy vs loops
+# Time how long it takes to curve 10 up to 10,000,000 grades
+
+for num_zeroes in range(2, 8):
+    num_grades = 10 ** num_zeroes
+    print(f'\n--- {num_grades:,} GRADES ---')
+    
+    np_curve(np_grades(num_grades)).tolist()  # Curve N grades with NumPy
+    loop_curve(loop_grades(num_grades))       # Curve N grades with loops
+
+
