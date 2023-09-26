@@ -10,15 +10,14 @@ all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C
 
 # +
 import csv
-from pprint import pprint
 
-with open('../data/Programming language survey.csv') as file:
+with open('../data/Programming language - responses.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=['timestamp', 'langs', 'years'])
-    languages_known_by_person = [line['langs'].split(', ') for line in reader]
+    reader = csv.DictReader(file, fieldnames=['timestamp', 'languages', 'years'])
+    results = [lang for line in reader for lang in line['languages'].split(", ")]
 
-print(len(languages_known_by_person))
-print(languages_known_by_person[0])
+print(len(results))
+print(results)
 # -
 
 # ## Find number of languages known
@@ -26,15 +25,15 @@ print(languages_known_by_person[0])
 #
 # E.g. **12/21 languages known by this class (57%)**
 
-# +
-langs_known = {lang for langs in languages_known_by_person for lang in langs}
-    
-print(f"{len(langs_known)} / {len(all_langs)} languages known by this class (as {round(len(langs_known) / len(all_langs) * 100)}%)")
-# -
+unique_langs = set(results)
+num_known = len(unique_langs)
+num_all = len(all_langs)
+print(f"{num_known} / {num_all} languages known by this class ({round(num_known/num_all * 100)}%)")
 
 # ## List languages not known by anyone in the class
 
-set(all_langs) - langs_known
+not_known = set(all_langs) - unique_langs
+print(not_known)
 
 # ## Rank languages by most commonly known
 # Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
@@ -43,14 +42,11 @@ set(all_langs) - langs_known
 
 # +
 from collections import Counter
-langs_count = Counter()
 
-for langs in languages_known_by_person:
-    langs_count.update(langs)
-        
-print(langs_count)
+langs_by_count = Counter(results)
+langs_by_count.update(not_known)
+langs_by_count.subtract(not_known)
 # -
 
-num_people = len(languages_known_by_person)
-for pos, (lang, count) in enumerate(langs_count.most_common(), start=1):
-    print(f"{pos}: {lang} ({round(count / num_people * 100)}%)")
+for i, (lang, count) in enumerate(langs_by_count.most_common()):
+    print(f"{i + 1}: {lang} ({count})")

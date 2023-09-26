@@ -16,7 +16,7 @@ print(len(all_langs))
 import pandas as pd
 
 
-df = pd.read_csv("../data/Programming language survey.csv", header=0, names=("timestamp", "languages", "years"), usecols=("languages", "years"))
+df = pd.read_csv("../data/Programming language - responses.csv", header=0, names=("timestamp", "languages", "years"), usecols=("languages", "years"))
 df.head()
 
 # +
@@ -95,9 +95,22 @@ for index in by_years.index:
 
 for lang in all_langs:
     new_df = by_years.loc[:, [lang, 'total']]
-    percent = new_df.loc[:, lang] / new_df.loc[:, 'total'] * 100
-    new_df['percent'] = percent.astype(int)
+    new_df['percent'] = new_df[lang].div(new_df['total'], axis=0) * 100
+    # Make it easier to read by rounding percent to the nearest int, and displaying NaN as -
+    new_df.fillna(-1, inplace=True)
+    new_df['percent'] = new_df['percent'].astype(int).astype(str)
+    new_df[new_df['percent'] == "-1"] = '-'
+    
     print(new_df.to_string())
     print()
+
+# Same as above but as a DataFrame of Percent used
+as_percent = by_years.iloc[:, :-1].div(by_years['total'], axis=0).round(2)
+as_percent.dropna(how='all', inplace=True)  # Remove rows with all N/A values
+as_percent = as_percent.loc[:, (as_percent != 0).any(axis=0)]  # Remove columns of only 0 values
+as_percent
+
+for i, lang in enumerate(as_percent.columns):
+    plot = as_percent[[lang]].plot(figsize=(5, 2))
 
 
