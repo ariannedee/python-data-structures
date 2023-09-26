@@ -78,7 +78,7 @@ df2['total'] = 1
 df2.head()
 # -
 
-by_years = df2.groupby('years').sum().drop(columns=['languages'])
+by_years = df2.groupby('years', observed=False).sum(numeric_only=True)
 by_years
 
 for index in by_years.index:
