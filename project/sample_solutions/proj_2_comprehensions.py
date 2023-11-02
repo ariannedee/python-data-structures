@@ -11,13 +11,14 @@ all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C
 # +
 import csv
 
-with open('../data/Programming language - responses.csv') as file:
+with open('../data/Survey-2023:11:02.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=['timestamp', 'languages', 'years'])
-    results = [lang for line in reader for lang in line['languages'].split(", ")]
+    reader = csv.DictReader(file, fieldnames=("timestamp", "languages", "years"))
+    responses = [response['languages'].split(';') for response in reader]
+    num_responses = len(responses)
+    langs_known = [lang for langs in responses for lang in langs]
 
-print(len(results))
-print(results)
+print(num_responses)
 # -
 
 # ## Find number of languages known
@@ -25,33 +26,32 @@ print(results)
 #
 # E.g. **12/21 languages known by this class (57%)**
 
-unique_langs = set(results)
-num_known = len(unique_langs)
-num_all = len(all_langs)
-print(f"{num_known} / {num_all} languages known by this class ({round(num_known / num_all * 100)}%)")
+langs_known_set = set(langs_known)
+print(langs_known_set)
+
+print(f"{len(langs_known_set)} / {len(all_langs)} languages known by this class ({round(len(langs_known_set) / len(all_langs) * 100)}%)")
 
 # ## List languages not known by anyone in the class
 
-not_known = set(all_langs) - unique_langs
-print(not_known)
+not_known = set(all_langs) - langs_known_set
+not_known_list = list(not_known)
+not_known_list.sort()
+print(not_known_list)
 
 # ## Rank languages by most commonly known
 # Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
 #
 # e.g. **1: Python (93%)**
 
-# +
-langs_by_count = {lang: results.count(lang) for lang in all_langs}
+langs_count = {lang: langs_known.count(lang) for lang in all_langs}
+print(langs_count)
 
-from pprint import pprint
+lang_count_list = list(langs_count.items())
 
-pprint(langs_by_count)
+lang_count_list.sort(key=lambda x: -x[1])
 
-# +
-langs_count = list(langs_by_count.items())
+for pos, (lang, count) in enumerate(lang_count_list, start=1):
+    percent_known = round(count / num_responses * 100)
+    print(f"{pos}: {lang} ({percent_known}%)")
 
-langs_count.sort(key=lambda t: -t[1])
-# -
 
-for i, (lang, count) in enumerate(langs_count):
-    print(f"{i + 1}: {lang} ({count})")

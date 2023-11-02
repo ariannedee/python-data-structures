@@ -14,7 +14,7 @@ import csv
 langs_known = []
 num_responses = 0
 
-with open('data/Survey-2023:11:02.csv') as file:
+with open('../data/Survey-2023:11:02.csv') as file:
     file.readline()
     reader = csv.DictReader(file, fieldnames=("timestamp", "languages", "years"))
     for line in reader:
@@ -22,7 +22,7 @@ with open('data/Survey-2023:11:02.csv') as file:
         langs_known.extend(langs.split(';'))
         num_responses += 1
 
-print(langs_known)
+print(num_responses)
 # -
 
 # ## Find number of languages known
