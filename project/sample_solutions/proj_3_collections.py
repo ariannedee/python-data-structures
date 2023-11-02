@@ -11,13 +11,14 @@ all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C
 # +
 import csv
 
-with open('../data/Programming language - responses.csv') as file:
+with open('data/Survey-2023:11:02.csv') as file:
     file.readline()
-    reader = csv.DictReader(file, fieldnames=['timestamp', 'languages', 'years'])
-    results = [lang for line in reader for lang in line['languages'].split(", ")]
+    reader = csv.DictReader(file, fieldnames=("timestamp", "languages", "years"))
+    responses = [response['languages'].split(';') for response in reader]
+    num_responses = len(responses)
+    langs_known = [lang for langs in responses for lang in langs]
 
-print(len(results))
-print(results)
+print(num_responses)
 # -
 
 # ## Find number of languages known
@@ -25,15 +26,17 @@ print(results)
 #
 # E.g. **12/21 languages known by this class (57%)**
 
-unique_langs = set(results)
-num_known = len(unique_langs)
-num_all = len(all_langs)
-print(f"{num_known} / {num_all} languages known by this class ({round(num_known/num_all * 100)}%)")
+langs_known_set = set(langs_known)
+print(langs_known_set)
+
+print(f"{len(langs_known_set)} / {len(all_langs)} languages known by this class ({round(len(langs_known_set) / len(all_langs) * 100)}%)")
 
 # ## List languages not known by anyone in the class
 
-not_known = set(all_langs) - unique_langs
-print(not_known)
+not_known = set(all_langs) - langs_known_set
+not_known_list = list(not_known)
+not_known_list.sort()
+print(not_known_list)
 
 # ## Rank languages by most commonly known
 # Print each language as `"{position}: {language} ({percent_known}%)"`, in order from most to least known
@@ -43,10 +46,8 @@ print(not_known)
 # +
 from collections import Counter
 
-langs_by_count = Counter(results)
-langs_by_count.update(not_known)
-langs_by_count.subtract(not_known)
-# -
+langs_count = Counter(langs_known)
 
-for i, (lang, count) in enumerate(langs_by_count.most_common()):
-    print(f"{i + 1}: {lang} ({count})")
+for pos, (lang, count) in enumerate(langs_count.most_common(), start=1):
+    percent_known = round(count / num_responses * 100)
+    print(f"{pos}: {lang} ({percent_known}%)")
