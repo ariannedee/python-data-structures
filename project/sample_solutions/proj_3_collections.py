@@ -11,7 +11,7 @@ all_langs = ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP', 'SQL', 'C', 'C
 # +
 import csv
 
-with open('data/Survey-2023:11:02.csv') as file:
+with open('../data/Survey-2023:11:02.csv') as file:
     file.readline()
     reader = csv.DictReader(file, fieldnames=("timestamp", "languages", "years"))
     responses = [response['languages'].split(';') for response in reader]
