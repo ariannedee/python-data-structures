@@ -47,7 +47,7 @@ is_even
 
 is_even = {}
 for i in range(10):
-    if i % 2 == 1:
+    if i % 2 == 0:
         is_even[i] = True
     else:
         is_even[i] = False
