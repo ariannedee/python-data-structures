@@ -1,6 +1,9 @@
 .idea/
 .vscode/
 
+# Python files
+*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
