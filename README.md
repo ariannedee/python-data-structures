@@ -7,8 +7,8 @@ This is the code for the *O'Reilly Live Training* - **Python Data Structures and
    - Installed from the [Python website](https://www.python.org/downloads/) or through [Anaconda](https://www.anaconda.com/)
 2. A copy of the **course files**
    - Cloned (ideal) or downloaded
-3. Jupyter, NumPy and Pandas installed
-    - `$ pip install jupyter numpy pandas`
+3. Jupyter, NumPy, Pandas, Matplotlib installed
+    - `$ pip install jupyter numpy pandas matplotlib`
 4. Run the notebooks
    - `$ jupyter-lab` or `$ jupyter notebook`
 5. Fill out a short **survey**: https://forms.gle/KCSXZy7tHeb1B9ce8
@@ -63,9 +63,9 @@ Clone the repository.
 
 ### 3. Install external Python packages
 
-**Jupyter**, **NumPy** and **Pandas** need to be installed.
+**Jupyter**, **NumPy** and **Pandas** and **Matplotlib** need to be installed.
 
-In a terminal: `pip3 install jupyter numpy pandas`
+In a terminal: `pip3 install jupyter numpy pandas matplotlib`
 
 ### 4. Run Jupyter
 
