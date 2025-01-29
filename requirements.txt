@@ -3,3 +3,4 @@ jupyterlab
 jupytext
 numpy
 pandas
+matplotlib
