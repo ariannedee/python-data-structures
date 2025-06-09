@@ -9,8 +9,8 @@ This is the code for the *O'Reilly Live Training* - **Python Data Structures and
    - Cloned (ideal) or downloaded
 3. Jupyter, NumPy and Pandas installed
     - `$ pip install jupyter numpy pandas`
-4. Run the notebooks
-   - `$ jupyter-lab` or `$ jupyter notebook`
+4. Run the notebooks in Jupyter, PyCharm or VS Code (I'll be using PyCharm)
+   - `$ jupyter-lab` or `$ jupyter notebook` if running in Jupyter
 5. Fill out a short **survey**: https://forms.gle/KCSXZy7tHeb1B9ce8
    - We will analyze the results during the class.
 
@@ -23,7 +23,7 @@ If you have further questions, please email **arianne.dee.studios** at **gmail**
 1. [Install Python](#1-install-python-37-or-higher)
 2. [Download the code](#2-download-the-course-files)
 3. [Install external packages](#3-install-external-python-packages)
-4. [Run the notebooks](#4-run-jupyter)
+4. [Run the notebooks](#4-run-the-notebooks)
 
 ### 1. Install Python 3.7 or higher
 
@@ -67,9 +67,11 @@ Clone the repository.
 
 In a terminal: `pip3 install jupyter numpy pandas`
 
-### 4. Run Jupyter
+### 4. Run the notebooks
 
-Navigate to your cloned or downloaded code, then run:
+VS Code and PyCharm (Unified) are Python IDEs that can run notebooks.
+
+Or, to run in Jupyter, navigate to your cloned or downloaded code, then run:
 
 - `$ jupyter-lab` to open the notebooks in Jupyter Lab in your browser; or
 - `$ jupyter notebook` to open the classic Jupyter Notebook
