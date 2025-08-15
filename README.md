@@ -1,6 +1,8 @@
 # Python Data Structures and Comprehensions Live Training
 
-This is the code for the *O'Reilly Live Training* - **Python Data Structures and Comprehensions** presented by Arianne Dee
+This is the local code for the *O'Reilly Live Training* - **Python Data Structures and Comprehensions** presented by Arianne Dee
+
+If you want to use the web-hosted code, go to: [https://ariannedee.github.io/python-data-structs](https://ariannedee.github.io/python-data-structs/lab/index.html)
 
 ## For this class, you will need:
 1. **Python 3.7 or higher** installed on your computer
